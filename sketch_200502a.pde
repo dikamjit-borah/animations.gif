@@ -1,4 +1,4 @@
-int speed = 12;
+int speed = 6;
 int stroke = 10;
 
 void setup()
@@ -22,4 +22,23 @@ void draw()
   }
   endShape();
   
+  translate(width/3, height/2);
+  rotate(speed*frameCount);
+  beginShape();
+  int j;
+  for(j = 0; j< 10; j++)
+  {
+    curveVertex(i, i);
+  }
+  endShape();
+  
+  translate(width/5, height/5);
+  rotate(speed*frameCount);
+  beginShape();
+  int k;
+  for(k = 0; k<10; k++)
+  {
+    curveVertex(k,k);
+  }
+  endShape();
 }
